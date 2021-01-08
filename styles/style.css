@@ -45,7 +45,7 @@ a {
 	color: #393c41;
 }
 
-main > section > section > section:first-of-type > a {
+main > article > section > section:first-of-type > a {
 	box-shadow: 0 1px 0px rgba(0, 0, 0, 1);
 	font-family: Gotham Book;
 	font-size: .9em;
@@ -54,7 +54,7 @@ main > section > section > section:first-of-type > a {
 	color: #393c41;
 }
 
-main > section > section > section:first-of-type > a:hover {
+main > article > section > section:first-of-type > a:hover {
 	color: #000;
 	box-shadow: 0 2px 0 0 #000;
 	transition: box-shadow .25s cubic-bezier(.5,.25,.25,.75), color .25s cubic-bezier(.5,.25,.25,.75);
@@ -300,7 +300,7 @@ main {
 	position: relative;
 }
 
-main > section {
+main > article {
 	height: 100vh;
 	width: 100%;
 	background-position: 50% 60%;
@@ -309,7 +309,7 @@ main > section {
 	scroll-snap-align: start;
 }
 
-main > section > section {
+main > article > section {
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -321,19 +321,19 @@ main > section > section {
 	flex-flow: column nowrap;
 }
 
-main > section:nth-child(1) > section {
+main > article:nth-child(1) > section {
 	opacity: 1;
 	display: flex;
 }
 
-main > section > section > section:first-of-type {
+main > article > section > section:first-of-type {
 	margin-top: 16vh;
 	text-align: center;
 	flex-grow: 1;
 	position: fixed;
 }
 
-main > section > section > section:last-of-type  {
+main > article > section > section:last-of-type  {
 	position: fixed;
 	bottom: 4em;
 	width: 100%;
@@ -342,11 +342,11 @@ main > section > section > section:last-of-type  {
 	flex-flow: column nowrap;
 }
 
-main > section:nth-child(1) > section > section:last-of-type {
+main > article:nth-child(1) > section > section:last-of-type {
 	bottom: 1.9em;
 }
 
-main > section > section > section:last-of-type > section {
+main > article > section > section:last-of-type > section {
 	width: 90%;
 	display: flex;
 	flex-flow: column nowrap;
@@ -355,7 +355,7 @@ main > section > section > section:last-of-type > section {
 
 /* KNOPPEN */
 
-main > section > section > section:last-of-type > section a {
+main > article > section > section:last-of-type > section a {
 	font-size: .8em;
 	width: 100%;
 	padding: 1em;
@@ -370,19 +370,19 @@ main > section > section > section:last-of-type > section a {
 	border-radius: 100px;
 }
 
-main > section > section > section:last-of-type > section a:nth-child(2) {
+main > article > section > section:last-of-type > section a:nth-child(2) {
 	background-color: rgba(255,255,255,0.8);
 	color: #171a20;
 }
 
-main > section > section > section:last-of-type > a:last-of-type {
+main > article > section > section:last-of-type > a:last-of-type {
 	margin: 0.62em;
 	color: #5c5e62;
 	font-size: .9em;
 	text-decoration: underline;
 }
 
-main section img {
+main article img {
 	height: 24px;
 	width: 24px;
 	display: block;
@@ -444,28 +444,28 @@ footer > ul > li > a {
 
 /* BACKGROUND IMAGES */
 
-main > section:nth-child(1) {
+main > article:nth-child(1) {
 	background-image: url("../images/mobile_model_3_v2.jpeg");
 	background-position: 50% 55%;
 }
 
-main > section:nth-child(2) {
+main > article:nth-child(2) {
 	background-image: url("../images/Mobile-ModelS.jpeg");
 }
 
-main > section:nth-child(3) {
+main > article:nth-child(3) {
 	background-image: url("../images/Mobile-ModelX.jpeg");
 }
 
-main > section:nth-child(4) {
+main > article:nth-child(4) {
 	background-image: url("../images/Mobile-ModelY.jpeg");
 }
 
-main > section:nth-child(5) {
+main > article:nth-child(5) {
 	background-image: url("../images/Mobile-SolarPanels.jpeg");
 }
 
-main > section:nth-child(6) {
+main > article:nth-child(6) {
 	background-image: url("../images/Mobile-Accessories.jpeg");
 	background-position: 50% 50%;
 }
@@ -592,38 +592,38 @@ main > section:nth-child(6) {
 
 @media screen and (min-width: 600px) {
 
-	main > section:nth-child(1) {
+	main > article:nth-child(1) {
 		background-image: url("../images/desktop_model_3_v2.jpeg");
 		background-position: 50% 60%;
 	}
 
-	main > section:nth-child(2) {
+	main > article:nth-child(2) {
 		background-image: url("../images/Desktop-ModelS.jpeg");
 	}
 
-	main > section:nth-child(3) {
+	main > article:nth-child(3) {
 		background-image: url("../images/Desktop-ModelX.jpeg");
 	}
 
-	main > section:nth-child(4) {
+	main > article:nth-child(4) {
 		background-image: url("../images/Desktop-ModelY.jpeg");
 	}
 
-	main > section:nth-child(5) {
+	main > article:nth-child(5) {
 		background-image: url("../images/Desktop-SolarPanels.jpeg");
 	}
 
-	main > section:nth-child(6) {
+	main > article:nth-child(6) {
 		background-image: url("../images/Desktop-Accessories.jpeg");
 		background-position: 50% 51%;
 	}
 
-	main > section > section > section:last-of-type > section a {
+	main > article > section > section:last-of-type > section a {
 		width: 256px;
 		margin: .5em;
 	}
 
-	main > section > section > section:last-of-type > section {
+	main > article > section > section:last-of-type > section {
 		width: auto;
 		display: flex;
 		justify-content: center;
@@ -663,7 +663,7 @@ main > section:nth-child(6) {
 		animation-name: none;
 	}
 
-	main > section:first-of-type > section > section:last-of-type > section a:first-of-type {
+	main > article:first-of-type > section > section:last-of-type > section a:first-of-type {
 		opacity: 0;
 		animation-name: fadeRight;
 		animation-delay: .75s;
@@ -671,7 +671,7 @@ main > section:nth-child(6) {
 		animation-fill-mode: both;
 	}
 
-	main > section:first-of-type > section > section:last-of-type > section a:last-of-type {
+	main > article:first-of-type > section > section:last-of-type > section a:last-of-type {
 		opacity: 0;
 		animation-name: fadeLeft;
 		animation-delay: .75s;
@@ -742,39 +742,39 @@ main > section:nth-child(6) {
 }
 
 #modelS main > article > section {
-	position: inherit;
-	top: inherit;
-	width: inherit;
-	padding: inherit;
-	opacity: inherit;
-	display: inherit;
-	align-content: inherit;
-	align-items: inherit;
-	flex-flow: inherit;
+	position: unset;
+	top: unset;
+	width: unset;
+	padding: unset;
+	opacity: unset;
+	display: unset;
+	align-content: unset;
+	align-items: unset;
+	flex-flow: unset;
 }
 
 #modelS main > article > section > section:last-of-type {
-	position: inherit;
-	bottom: inherit;
-	width: inherit;
-	align-items: inherit;
-	display: inherit;
-	flex-flow: inherit;
+	position: unset;
+	bottom: unset;
+	width: unset;
+	align-items: unset;
+	display: unset;
+	flex-flow: unset;
 }
 
 #modelS main > article > section > section:first-of-type {
-	margin-top: inherit;
-	text-align: inherit;
-	flex-grow: inherit;
-	position: inherit;
+	margin-top: unset;
+	text-align: unset;
+	flex-grow: unset;
+	position: unset;
 }
 
 #modelS main article img {
-	height: inherit;
-	width: inherit;
-	display: inherit;
-	margin: inherit;
-	position: inherit;
+	height: unset;
+	width: unset;
+	display: unset;
+	margin: unset;
+	position: unset;
 }
 
 
