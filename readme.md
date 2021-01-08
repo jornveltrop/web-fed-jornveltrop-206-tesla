@@ -1,7 +1,5 @@
 # Procesverslag
-__Auteur:__ Jorn Veltrop
-
-__Auteur:__ Jorn Veltrop
+**Auteur:** Jorn Veltrop\s\s
 **Klas:** 206B
 
 
