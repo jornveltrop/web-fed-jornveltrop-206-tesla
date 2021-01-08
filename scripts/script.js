@@ -21,7 +21,6 @@ function open() {
   menu.classList.toggle("open");
   nav.classList.toggle("showNav");
   nav.classList.toggle("hideNav");
-  main.classList.toggle("overflow");
   main.classList.toggle("navOverlay");
   menu.classList.toggle("filterReset");
 
@@ -44,8 +43,8 @@ function close() {
   menu.classList.toggle("open", false);
   nav.classList.toggle("showNav", false);
   nav.classList.toggle("hideNav", true);
-  main.classList.toggle("overflow", false);
   main.classList.toggle("navOverlay", false);
+  menu.classList.toggle("filterReset", false);
 
   // 1.3.1 RESET TABINDEX
   for (i = 0; i < menuItems.length; i++) {
