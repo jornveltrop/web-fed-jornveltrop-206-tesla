@@ -1,12 +1,25 @@
 # Procesverslag
 **Auteur:** Jorn Veltrop
 
+
 **Klas:** 206B
+
+
 **Datum:** 6 - 1 - 2021
+
+
 **Docent:** Robert Spier
+
+
 **Vak:** Front-end development
+
+
 **Blok:** Blok 2 Web
+
+
 **Schooljaar:** 2
+
+
 
 https://jornveltrop.github.io/web-fed-jornveltrop-206-tesla/
 
