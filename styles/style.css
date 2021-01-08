@@ -16,27 +16,27 @@
 
 @font-face {
 	font-family: Gotham Book;
-	src: url(../font/Gotham-Book.otf);
+	src: url("../font/Gotham-Book.otf");
 }
 
 @font-face {
 	font-family: Gotham Medium;
-	src: url(../font/Gotham-Medium.otf);
+	src: url("../font/Gotham-Medium.otf");
 }
 
 @font-face {
 	font-family: Gotham Bold;
-	src: url(../font/Gotham-Bold.otf);
+	src: url("../font/Gotham-Bold.otf");
 }
 
 @font-face {
 	font-family: Gotham Light;
-	src: url(../font/Gotham-Light.otf);
+	src: url("../font/Gotham-Light.otf");
 }
 
 @font-face {
 	font-family: Gotham Thin;
-	src: url(../font/Gotham-Thin.otf);
+	src: url("../font/Gotham-Thin.otf");
 }
 
 a {
@@ -275,10 +275,6 @@ nav:last-of-type ul li {
 
 /* CLASSES */
 
-.overflow {
-	overflow: hidden;
-}
-
 .bold {
 	font-family: Gotham Bold;
 }
@@ -286,6 +282,7 @@ nav:last-of-type ul li {
 .showNav {
 	right: 0px;
 	transition: all .4s ease;
+	overscroll-behavior: none;
 }
 
 .hideNav {
@@ -433,7 +430,7 @@ footer > ul > li:nth-child(6) {
 	display: block;
 }
 
-main > section:nth-child(6) > section > section:last-of-type {
+main > article:nth-child(6) > section > section:last-of-type {
 	bottom: 7.5em;
 }
 
@@ -742,12 +739,12 @@ main > article:nth-child(6) {
 }
 
 #modelS main > article > section {
-	position: unset;
+	position: relative;
 	top: unset;
 	width: unset;
 	padding: unset;
 	opacity: unset;
-	display: unset;
+	display: block;
 	align-content: unset;
 	align-items: unset;
 	flex-flow: unset;
@@ -1217,7 +1214,7 @@ main > article:nth-child(6) {
 	min-height: 3em;
 	min-width: 3em;
 	background-color: transparent;
-	background-image: url(../images/plus.svg);
+	background-image: url("../images/plus.svg");
 	background-size: 100% 100%;
 	background-position: 50% 50%;
 	border: 3px solid #000;
@@ -1227,7 +1224,7 @@ main > article:nth-child(6) {
 
 #modelS main > article > section:last-of-type > section > input:hover {
 	background-color: #171a20;
-	background-image: url(../images/plus-wit.svg);
+	background-image: url("../images/plus-wit.svg");
 	transition: .5s;
 	cursor: pointer;	
 }
@@ -1247,7 +1244,7 @@ main > article:nth-child(6) {
 }
 
 #modelS main > article:nth-child(3) > section:first-of-type {
-	background-image: url(../images/model-s-performance-mobile.jpeg);
+	background-image: url("../images/model-s-performance-mobile.jpeg");
 	background-size: 120%;
 	background-position: 50% 40%;
 }
@@ -1342,7 +1339,7 @@ main > article:nth-child(6) {
 /*  SECTION 6 */
 
 #modelS main > article:nth-child(6) > section:first-of-type {
-	background-image: url(../images/interieur_mobile.jpeg);
+	background-image: url("../images/interieur_mobile.jpeg");
 	background-size: 120%;
 	background-position: 50% 40%;
 }
@@ -1360,7 +1357,7 @@ main > article:nth-child(6) {
 /*  SECTION 7 */
 
 #modelS main > article:nth-child(7) > section:first-of-type {
-	background-image: url(../images/exterieur_mobile.jpeg);
+	background-image: url("../images/exterieur_mobile.jpeg");
 	background-size: 120%;
 	background-position: 50% 38%;
 }
