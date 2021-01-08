@@ -83,19 +83,19 @@ window.addEventListener('load', function () {
 
 // 3. OPACITY SCROLL-SNAP FORMULE
 
-let overlay1 = document.querySelector("#home main > section:nth-child(1) > section");
-let overlay2 = document.querySelector("#home main > section:nth-child(2) > section");
-let overlay3 = document.querySelector("#home main > section:nth-child(3) > section");
-let overlay4 = document.querySelector("#home main > section:nth-child(4) > section");
-let overlay5 = document.querySelector("#home main > section:nth-child(5) > section");
-let overlay6 = document.querySelector("#home main > section:nth-child(6) > section");
+let overlay1 = document.querySelector("#home main > article:nth-child(1) > section");
+let overlay2 = document.querySelector("#home main > article:nth-child(2) > section");
+let overlay3 = document.querySelector("#home main > article:nth-child(3) > section");
+let overlay4 = document.querySelector("#home main > article:nth-child(4) > section");
+let overlay5 = document.querySelector("#home main > article:nth-child(5) > section");
+let overlay6 = document.querySelector("#home main > article:nth-child(6) > section");
 
-let section1 = document.querySelector("#home main > section:nth-child(1)");
-let section2 = document.querySelector("#home main > section:nth-child(2)");
-let section3 = document.querySelector("#home main > section:nth-child(3)");
-let section4 = document.querySelector("#home main > section:nth-child(4)");
-let section5 = document.querySelector("#home main > section:nth-child(5)");
-let section6 = document.querySelector("#home main > section:nth-child(6)");
+let article1 = document.querySelector("#home main > article:nth-child(1)");
+let article2 = document.querySelector("#home main > article:nth-child(2)");
+let article3 = document.querySelector("#home main > article:nth-child(3)");
+let article4 = document.querySelector("#home main > article:nth-child(4)");
+let article5 = document.querySelector("#home main > article:nth-child(5)");
+let article6 = document.querySelector("#home main > article:nth-child(6)");
 
 let footer = document.querySelector("#home footer");
 
@@ -110,17 +110,17 @@ if (document.querySelector("#home")) {
 
 function scrollActions() {
 
-  let distance1 = section1.getBoundingClientRect().top;
-  let distance11 = section1.getBoundingClientRect().bottom - viewportHalf;
-  let distance2 = section2.getBoundingClientRect().top;
-  let distance21 = section2.getBoundingClientRect().bottom - viewportHalf;
-  let distance3 = section3.getBoundingClientRect().top;
-  let distance31 = section3.getBoundingClientRect().bottom - viewportHalf;
-  let distance4 = section4.getBoundingClientRect().top;
-  let distance41 = section4.getBoundingClientRect().bottom - viewportHalf;
-  let distance5 = section5.getBoundingClientRect().top;
-  let distance51 = section5.getBoundingClientRect().bottom - viewportHalf;
-  let distance6 = section6.getBoundingClientRect().top;
+  let distance1 = article1.getBoundingClientRect().top;
+  let distance11 = article1.getBoundingClientRect().bottom - viewportHalf;
+  let distance2 = article2.getBoundingClientRect().top;
+  let distance21 = article2.getBoundingClientRect().bottom - viewportHalf;
+  let distance3 = article3.getBoundingClientRect().top;
+  let distance31 = article3.getBoundingClientRect().bottom - viewportHalf;
+  let distance4 = article4.getBoundingClientRect().top;
+  let distance41 = article4.getBoundingClientRect().bottom - viewportHalf;
+  let distance5 = article5.getBoundingClientRect().top;
+  let distance51 = article5.getBoundingClientRect().bottom - viewportHalf;
+  let distance6 = article6.getBoundingClientRect().top;
 
 
   if (distance1 < viewportHalf) {
