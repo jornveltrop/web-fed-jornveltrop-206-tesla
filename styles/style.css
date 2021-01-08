@@ -791,12 +791,6 @@ main > article:nth-child(6) {
 	scroll-snap-type: none;
 }
 
-#modelS body {
-	margin: 0;
-	font-family: Gotham Book;
-	font-smoothing: antialiased;
-}
-
 
 /*  HEADER */
 
