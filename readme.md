@@ -12,6 +12,10 @@ https://jornveltrop.github.io/web-fed-jornveltrop-206-tesla/
 
 ## Bronnenlijst
 1. Speedometer SVG icon's Tesla: https://www.tesla.com/nl_nl/models
+2. Wifi SVG icon's Tesla: https://www.tesla.com/nl_nl/models
+3. Roof png icon Tesla: https://www.tesla.com/nl_nl/models
+4. CD png icon Tesla: https://www.tesla.com/nl_nl/models
+5. Video's & foto's Tesla: https://www.tesla.com/nl_nl/models
 
 
 
