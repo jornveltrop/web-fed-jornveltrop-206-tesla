@@ -18,12 +18,12 @@ for (i = 0; i < menuItems.length; i++) {
 menu.addEventListener("click", open);
 
 function open() {
-  menu.classList.toggle("open", true);
-  nav.classList.toggle("showNav", true);
-  nav.classList.toggle("hideNav", false);
-  main.classList.toggle("overflow", true);
-  main.classList.toggle("navOverlay", true);
-  menu.classList.toggle("filterReset", true);
+  menu.classList.toggle("open");
+  nav.classList.toggle("showNav");
+  nav.classList.toggle("hideNav");
+  main.classList.toggle("overflow");
+  main.classList.toggle("navOverlay");
+  menu.classList.toggle("filterReset");
 
   setTimeout(function() {
     document.activeElement.blur();
