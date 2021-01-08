@@ -1,0 +1,1632 @@
+/* CSS Document */
+
+*, *::after, *::before {
+	box-sizing:border-box;
+}
+
+*:focus {
+	outline-offset: 4px;  
+	outline-color: #393c41;
+	outline-style: auto;
+	outline-width: 1px;
+}
+
+
+/* TYPO */
+
+@font-face {
+	font-family: Gotham Book;
+	src: url(../font/Gotham-Book.otf);
+}
+
+@font-face {
+	font-family: Gotham Medium;
+	src: url(../font/Gotham-Medium.otf);
+}
+
+@font-face {
+	font-family: Gotham Bold;
+	src: url(../font/Gotham-Bold.otf);
+}
+
+@font-face {
+	font-family: Gotham Light;
+	src: url(../font/Gotham-Light.otf);
+}
+
+@font-face {
+	font-family: Gotham Thin;
+	src: url(../font/Gotham-Thin.otf);
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #393c41;
+}
+
+main > section > section > section:first-of-type > a {
+	box-shadow: 0 1px 0px rgba(0, 0, 0, 1);
+	font-family: Gotham Book;
+	font-size: .9em;
+	height: auto;
+	letter-spacing: -.6px;
+	color: #393c41;
+}
+
+main > section > section > section:first-of-type > a:hover {
+	color: #000;
+	box-shadow: 0 2px 0 0 #000;
+	transition: box-shadow .25s cubic-bezier(.5,.25,.25,.75), color .25s cubic-bezier(.5,.25,.25,.75);
+}
+
+h2 {
+	font-family: Gotham Book;
+	font-size: 2.4em;
+	color: #393c41;
+	letter-spacing: -.7px;
+	padding: .1em;
+	margin: 0;
+}
+
+p {
+	font-family: Gotham Book;
+	font-size: .95em;
+	letter-spacing: -.6px;
+	color: #5c5e62;
+	display: inline-block;
+	margin: 0 0 .125em 0;
+}
+
+
+/* STD ELEMENTEN */
+
+html {
+	height: 100%;
+	margin: 0;
+	overflow: scroll;
+	overscroll-behavior-block: none;
+	scroll-behavior: smooth;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+	background: #000;
+}
+
+body {
+	margin: 0;
+	font-family: Gotham Book;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* HEADER */
+
+header {
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	height: 52px;
+	justify-content: space-between;
+	padding: 0 1.5em;
+	z-index: 15;
+}
+
+header a img {
+	width: 100px;
+	height: auto;
+}
+
+header > button:focus {
+	outline-offset: 4px;
+}
+
+header > button {
+	position: relative;
+	appearance: none;
+	margin: 0;
+	padding: .17em;
+	width: 25px;
+	height: 22px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	z-index: 30;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	transform: rotate(0deg);
+	transition: .30s ease-in-out;	
+	outline-offset: 4px;
+}
+
+header > button > span {
+	height: 2px;
+	width: 100%;
+	background: #000;
+	opacity: 1;
+	right: 0;
+	transform: rotate(0deg);
+	transition: .30s ease-in-out;
+}
+
+header > button > span:nth-child(1) {
+	transform-origin: left center;
+}
+
+header > button > span:nth-child(2) {
+	transform-origin: right center;
+}
+
+header > button span:nth-child(3) {
+	transform-origin: left center;
+}
+
+header button.open span:nth-child(1) {
+	transform: rotate(45deg);
+}
+
+header button.open span:nth-child(2) {
+	width: 0%;
+	opacity: 30%;
+}
+
+header button.open span:nth-child(3) {
+	transform: rotate(-45deg);
+	margin-top: 7px;
+}
+
+
+/* NAV */
+
+.navOverlay {
+	opacity: .75;
+	transition: .5s;
+}
+
+nav:first-of-type {
+	width: 100%;
+	display: none;
+	margin-top: 1px;
+	text-transform: uppercase;
+	justify-content: center;
+	z-index: 20;
+}
+
+nav:first-of-type > ul {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+}
+
+nav:first-of-type ul li {
+	list-style: none;
+	padding: 0 .8em;
+	align-items: center;
+}
+
+nav:first-of-type ul li:nth-child(1) {
+	margin-left: auto;
+}
+
+nav:first-of-type ul li:nth-child(7) {
+	margin-left: auto;
+}
+
+nav:first-of-type ul li a {
+	font-size: .9em;
+	color: #000;
+	font-family: Gotham Medium;
+}
+
+nav:last-of-type {
+	z-index: 20;
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 312px;
+	background: #fff;
+	padding: 3.2em 1.5em 2em 1.5em;
+	display: flex;
+	overflow: scroll;
+	flex-flow: column nowrap;
+	text-transform: uppercase;
+	font-size: .8em;
+	font-family: Gotham Medium;
+	transition: all .4s ease;
+}
+
+nav:last-of-type a {
+	padding: 1.25em .6em;
+}
+
+nav:last-of-type p {
+	font-size: .8em;
+	font-family: Gotham Medium;
+	color: #393c41;
+	margin: 0;
+}
+
+nav:last-of-type ul {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+nav:last-of-type ul:nth-child(2) {
+	display: none;
+}
+
+nav:last-of-type ul:nth-child(3) {
+	display: none;
+}
+
+nav:last-of-type ul li {
+	list-style: none;
+	padding: 1.25em .6em;
+	border-bottom: 1px solid #d0d1d2;
+}
+
+
+/* CLASSES */
+
+.overflow {
+	overflow: hidden;
+}
+
+.bold {
+	font-family: Gotham Bold;
+}
+
+.showNav {
+	right: 0px;
+	transition: all .4s ease;
+}
+
+.hideNav {
+	right: -312px;
+	transition: all .4s ease;
+}
+
+
+/* MAIN */
+
+main {
+	position: relative;
+}
+
+main > section {
+	height: 100vh;
+	width: 100%;
+	background-position: 50% 60%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	scroll-snap-align: start;
+}
+
+main > section > section {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 0 1.25em;
+	opacity: 0;
+	display: none;
+	align-content: stretch;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+
+main > section:nth-child(1) > section {
+	opacity: 1;
+	display: flex;
+}
+
+main > section > section > section:first-of-type {
+	margin-top: 16vh;
+	text-align: center;
+	flex-grow: 1;
+	position: fixed;
+}
+
+main > section > section > section:last-of-type  {
+	position: fixed;
+	bottom: 4em;
+	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+main > section:nth-child(1) > section > section:last-of-type {
+	bottom: 1.9em;
+}
+
+main > section > section > section:last-of-type > section {
+	width: 90%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+
+/* KNOPPEN */
+
+main > section > section > section:last-of-type > section a {
+	font-size: .8em;
+	width: 100%;
+	padding: 1em;
+	margin: .5em 0;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background-color: rgba(23,26,32,0.8);
+	cursor: pointer;
+	border: none;
+	border-radius: 100px;
+}
+
+main > section > section > section:last-of-type > section a:nth-child(2) {
+	background-color: rgba(255,255,255,0.8);
+	color: #171a20;
+}
+
+main > section > section > section:last-of-type > a:last-of-type {
+	margin: 0.62em;
+	color: #5c5e62;
+	font-size: .9em;
+	text-decoration: underline;
+}
+
+main section img {
+	height: 24px;
+	width: 24px;
+	display: block;
+	margin: .9em 0 .5em 0;
+	position: relative;
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: transparent;
+	bottom: .7em;
+	display: none;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+footer > ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: column;
+	margin: 0;
+	padding: 0;
+}
+
+footer > ul > li {
+	display: none;
+	list-style: none;
+	margin: .25em;
+}
+
+footer > ul > li:nth-child(1) {
+	display: block;
+}
+
+footer > ul > li:nth-child(2) {
+	display: block;
+}
+
+footer > ul > li:nth-child(6) {
+	display: block;
+}
+
+main > section:nth-child(6) > section > section:last-of-type {
+	bottom: 7.5em;
+}
+
+footer > ul > li > a {
+	font-size: .8em;
+}
+
+
+/* BACKGROUND IMAGES */
+
+main > section:nth-child(1) {
+	background-image: url("../images/mobile_model_3_v2.jpeg");
+	background-position: 50% 55%;
+}
+
+main > section:nth-child(2) {
+	background-image: url("../images/Mobile-ModelS.jpeg");
+}
+
+main > section:nth-child(3) {
+	background-image: url("../images/Mobile-ModelX.jpeg");
+}
+
+main > section:nth-child(4) {
+	background-image: url("../images/Mobile-ModelY.jpeg");
+}
+
+main > section:nth-child(5) {
+	background-image: url("../images/Mobile-SolarPanels.jpeg");
+}
+
+main > section:nth-child(6) {
+	background-image: url("../images/Mobile-Accessories.jpeg");
+	background-position: 50% 50%;
+}
+
+
+/*  ANIMATIONS  */
+
+.fadeInUpH1 {
+	opacity: 0;
+	animation-name: fadeInUp;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.fadeInUp{
+	opacity: 0;
+	animation-name: fadeInUp;
+	animation-delay: .75s;
+	animation-duration: .6s;
+	animation-fill-mode: both;
+}
+
+.fadeIn {
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-delay: .75s;
+	animation-duration: .7s;
+	animation-fill-mode: both;
+}
+
+.fadeDown{
+	align-content: stretch;
+	align-items: center;
+	display: flex;
+	flex-flow: column nowrap;
+	opacity: 0;
+	animation-name: fadeDown;
+	animation-delay: 1.4s;
+	animation-duration: .6s;
+	animation-fill-mode: both;
+}
+
+.bounce {
+	animation-name: bounce;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(5px);
+	}
+
+	60% {
+		transform: translateY(3px);
+	}
+}
+
+
+@keyframes fadeInUp {
+	from {
+		transform: translate3d(0, 20px, 0)
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeDown {
+	from {
+		transform: translate3d(0, -20px, 0);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeRight {
+	from {
+		transform: translate3d(-20px, 0, 0);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeLeft {
+	from {
+		transform: translate3d(20px, 0, 0);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+
+/*  RESPONSIVE */
+
+@media screen and (min-width: 600px) {
+
+	main > section:nth-child(1) {
+		background-image: url("../images/desktop_model_3_v2.jpeg");
+		background-position: 50% 60%;
+	}
+
+	main > section:nth-child(2) {
+		background-image: url("../images/Desktop-ModelS.jpeg");
+	}
+
+	main > section:nth-child(3) {
+		background-image: url("../images/Desktop-ModelX.jpeg");
+	}
+
+	main > section:nth-child(4) {
+		background-image: url("../images/Desktop-ModelY.jpeg");
+	}
+
+	main > section:nth-child(5) {
+		background-image: url("../images/Desktop-SolarPanels.jpeg");
+	}
+
+	main > section:nth-child(6) {
+		background-image: url("../images/Desktop-Accessories.jpeg");
+		background-position: 50% 51%;
+	}
+
+	main > section > section > section:last-of-type > section a {
+		width: 256px;
+		margin: .5em;
+	}
+
+	main > section > section > section:last-of-type > section {
+		width: auto;
+		display: flex;
+		justify-content: center;
+		flex-flow: row nowrap;
+	}
+
+	nav:last-of-type ul:nth-child(1) {
+		display: none;
+	}
+
+	nav:last-of-type ul:nth-child(2) {
+		display: block;
+	}
+
+	footer {
+		bottom: 2.5em;
+	}
+
+	footer > ul {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		align-content: center;
+		flex-flow: row wrap;
+		padding: 0;
+	}
+
+	footer > ul > li {
+		display: block;
+		margin: .2em 1em;
+	}
+
+	.fadeInUp {
+		opacity: 1;
+		animation-name: none;
+	}
+
+	main > section:first-of-type > section > section:last-of-type > section a:first-of-type {
+		opacity: 0;
+		animation-name: fadeRight;
+		animation-delay: .75s;
+		animation-duration: .7s;
+		animation-fill-mode: both;
+	}
+
+	main > section:first-of-type > section > section:last-of-type > section a:last-of-type {
+		opacity: 0;
+		animation-name: fadeLeft;
+		animation-delay: .75s;
+		animation-duration: .7s;
+		animation-fill-mode: both;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+
+	nav:first-of-type {
+		display: block;
+	}
+
+	nav:last-of-type ul:nth-child(1) {
+		display: none;
+	}
+
+	nav:last-of-type ul:nth-child(2) {
+		display: none;
+	}
+
+	nav:last-of-type ul:nth-child(3){
+		display: block;
+	}
+
+	nav:last-of-type {
+		font-size: .875em;
+		font-family: Gotham Bold;
+	}
+
+	header button.open span:nth-child(3) {
+		margin-top: .43em;
+	}
+}
+
+
+
+
+/*  NEW PAGE - MODEL S */
+
+
+/*  RESET */
+
+#modelS main > article:nth-child(1) {
+	background-image: none;
+	background-position: 50% 55%;
+}
+
+#modelS main > article:nth-child(2) {
+	background-image: none;
+}
+
+#modelS main > article:nth-child(3) {
+	background-image: none;
+}
+
+#modelS main > article:nth-child(4) {
+	background-image: none;
+}
+
+#modelS main > article:nth-child(5) {
+	background-image: none;
+}
+
+#modelS main > article:nth-child(6) {
+	background-image: none;
+}
+
+#modelS main > article > section {
+	position: inherit;
+	top: inherit;
+	width: inherit;
+	padding: inherit;
+	opacity: inherit;
+	display: inherit;
+	align-content: inherit;
+	align-items: inherit;
+	flex-flow: inherit;
+}
+
+#modelS main > article > section > section:last-of-type {
+	position: inherit;
+	bottom: inherit;
+	width: inherit;
+	align-items: inherit;
+	display: inherit;
+	flex-flow: inherit;
+}
+
+#modelS main > article > section > section:first-of-type {
+	margin-top: inherit;
+	text-align: inherit;
+	flex-grow: inherit;
+	position: inherit;
+}
+
+#modelS main article img {
+	height: inherit;
+	width: inherit;
+	display: inherit;
+	margin: inherit;
+	position: inherit;
+}
+
+
+/*  CODE PAGINA 2 */
+
+#modelS {
+	height: 100%;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	overscroll-behavior-block: none;
+	scroll-behavior: smooth;
+	background: #000;
+	overflow: scroll;
+	overscroll-behavior-block: none;
+	scroll-behavior: smooth;
+	scroll-snap-type: none;
+}
+
+#modelS body {
+	margin: 0;
+	font-family: Gotham Book;
+	font-smoothing: antialiased;
+}
+
+
+/*  HEADER */
+
+#modelS header {
+	position: absolute;
+}
+
+#modelS header nav:last-of-type p {
+	padding: 0;
+	font-size: .8em;
+	font-family: Gotham Medium;
+	color: #393c41;
+	margin: 0;
+	line-height: inherit;
+}
+
+
+/*  STD ELEMENTEN */
+
+#modelS main {
+	position: relative;
+}
+
+#modelS h1 {
+	font-family: Gotham Book;
+	font-size: 33px;
+	color: #fff;
+	letter-spacing: -.7px;
+	padding: .12em;
+	margin: 0;
+}
+
+#modelS h3 {
+	font-family: Gotham Book;
+	font-size: 23px;
+	line-height: 32px;
+	color: #171A22;
+	margin: 0;
+	letter-spacing: 0;
+	padding: 0;
+}
+
+#modelS h2 {
+	font-family: Gotham Light;
+	font-size: 17px;
+	line-height: 17px;
+	letter-spacing: -.6px;
+	color: #171A22;
+	margin: 0;
+}
+
+#modelS h4 {
+	font-family: Gotham Book;
+	font-size: 23px;
+	color: #000;
+	margin: 0;
+}
+
+#modelS h5 {
+	font-family: Gotham Book;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+}
+
+#modelS a {
+	cursor: pointer;
+	color: #fff;
+	font-size: 12px;
+}
+
+#modelS p {
+	font-family: Gotham Book;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0;
+	color: #393c41;
+	display: inline-block;
+	margin: 0;
+	padding: 1.7em 0 1em 0;
+}
+
+#modelS main > article {
+	height: auto;
+	position: relative;
+	background: #fff;
+	background-position: 50% 60%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	scroll-snap-align: start;
+}
+
+#modelS header img {
+	filter: invert(1);
+}
+
+
+/*  COLOR SWITCH HAMBURGER OPEN */
+
+.filter {
+	filter: invert(1);
+	transition: .5s;
+}
+
+.filterReset {
+	filter: invert(0);
+	transition: .5s;
+}
+
+#modelS header > nav:last-of-type a {
+	color: #393c41;
+}
+
+
+/*  SECTION 1 */
+
+#modelS main > article:nth-child(1) {
+	height: 100vh;
+	background-image: url("../images/Mobile-ModelS.jpeg");
+	background-position: 50% 70%;
+}
+
+#modelS main > article:nth-child(1) > section {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	padding: 0 2em;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+
+#modelS main > article:nth-child(1) > section:first-of-type {
+	top: 8em;
+	position: absolute;
+	width: 100%;
+	display: flex;
+	padding: 0 2em;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type {
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	bottom: 0;
+	padding-bottom: 4.9em;
+	top: inherit;
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type > ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type > ul > li {
+	display: flex;
+	flex-direction: column;
+	padding: 0 .625em;
+	align-items: center;
+	width: 33%;
+	border-left: 1px solid #000;
+}
+
+
+/* METER */
+
+#modelS main ul li section g {
+	height: 25px;
+	overflow: hidden;
+	position: relative;
+	width: 40px;
+	transform: scale(.8);
+	display: block;
+	fill: #fff;
+}
+
+#modelS main ul li section g > svg:nth-child(2) {
+	fill: #191b1d;
+	left: calc(50% - 14px);
+	max-width: 28px;
+	opacity: .2;
+	position: absolute;
+	bottom: 4px;
+}
+
+#modelS main ul li section g > svg:nth-child(3) {
+	bottom: 4px;
+	left: calc(50% - 2px);
+	width: 4px;
+	position: absolute;
+	z-index: 2;
+	transform-origin: center bottom;
+	transition: transform 1.733s cubic-bezier(.77,0,.175,1) .2s;
+}
+
+.naaldReset {
+	transform: translateZ(0) rotate(-90deg);
+}
+
+.naaldAnimatie {
+	transform: translateZ(0) rotate(90deg);
+	transition: transform 1.733s cubic-bezier(.77,0,.175,1) .2s;
+}
+
+#modelS main > article:nth-child(1) g {
+	fill: #000;
+}
+
+/* EINDE METER */
+
+
+#modelS main > article:nth-child(1) > section:last-of-type > ul > li:first-of-type {
+	border-left: none;
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type li > section {
+	display: flex;
+	margin: .5em 0;
+	align-items: center;
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type li > section h5 {
+	margin-left: .3em
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type p {
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #000;
+	text-align: center;
+	padding: 0;
+}
+
+#modelS main > article > section:last-of-type > a:first-of-type {
+	width: 100%;
+	padding: .7em;
+	margin: 1.43em 0 2.5em;
+	color: #000;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background-color: transparent;
+	border: 3px solid #171a20;
+	border-radius: 3em;
+	cursor: pointer;
+}
+
+#modelS main > article > section:last-of-type > a:first-of-type:hover {
+	background: #171a20;
+	color: #fff;
+	transition: .5s;
+}
+
+#modelS main > article:nth-child(1) > section:last-of-type a:last-of-type {
+	text-decoration: underline;
+}
+
+
+/*  SECTION 2 */
+
+#modelS main > article:nth-child(2) > section:first-of-type {
+	background: #f2f2f2;
+	padding-top: 4em;
+	position: relative;
+	height: inherit;
+	display: inherit;
+	align-items: inherit;
+	padding-bottom: inherit;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type p {
+	font-size: 11px;
+	line-height: 12px;
+	color: #000;
+	text-align: right;
+	padding: 0;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul {
+	display: inherit;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: calc(100% - 4em);
+	position: absolute;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li {
+	display: inherit;
+	flex-direction: inherit;
+	align-items: inherit;
+	width: inherit;
+	border-left: inherit;
+	padding: 0;
+	position: absolute;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li::before {
+	content:"";
+	position: absolute;
+	right: 3px;
+	width: 2px;
+	background-color: #000;
+	bottom: 1px;
+	top: 0;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li:nth-child(1) {
+	max-width: 35%;
+	top: 1%;
+	height: 19%;
+	left: 47%;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li:nth-child(2) {
+	max-width: 32%;
+	top: 17%;
+	height: 30%;
+	left: 11%;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li:nth-child(3) {
+	max-width: 30%;
+	top: 55%;
+	height: 27%;
+	right: 15%;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li > p {
+	position: absolute;
+	right: 15px;
+	top: -5px;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li:nth-child(3) > p {
+	top: auto;
+	bottom: 0;
+	padding-left: 1em;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li::after {
+	content:"";
+	position: absolute;
+	background-color: #fff;
+	right: 1px;
+	bottom: 0;
+	height: 4px;
+	width: 5px;
+	border: 1px solid #000;
+	border-radius: 8px;
+	box-sizing: initial;
+}
+
+#modelS main > article:nth-child(2) > section:first-of-type ul > li:nth-child(3)::after {
+	top: 0;
+	bottom: auto;
+}
+
+#modelS main > article > section:last-of-type {
+	padding: 2em 1.5em;
+}
+
+#modelS main > article > section:last-of-type > section {
+	display: flex;
+	margin-top: 1.7em;
+	align-items: center;
+}
+
+#modelS main > article > section:last-of-type > section > a {
+	width: 100%;
+	padding: .76em;
+	margin: 0;
+	color: #000;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background-color: transparent;
+	border: 3px solid #171a20;
+	border-radius: 3em;
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+#modelS main > article > section:last-of-type > section > a:first-of-type:hover {
+	background: #171a20;
+	color: #fff;
+	transition: .5s;
+}
+
+#modelS main > article > section:last-of-type > section > label {
+	width: auto;
+	font-size: 12px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	margin-right: 1em;
+}
+
+#modelS main > article > section:last-of-type > section > input {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	min-height: 3em;
+	min-width: 3em;
+	background-color: transparent;
+	background-image: url(../images/plus.svg);
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	border: 3px solid #000;
+	margin-right: .625em;
+	border-radius: 25px;
+}
+
+#modelS main > article > section:last-of-type > section > input:hover {
+	background-color: #171a20;
+	background-image: url(../images/plus-wit.svg);
+	transition: .5s;
+	cursor: pointer;	
+}
+
+#modelS main > article > section:last-of-type > section > label:hover {
+	cursor: pointer;
+}
+
+
+/*  SECTION 3 */
+
+#modelS main > article > section:first-of-type {
+	height: 425px;
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 5vh;
+}
+
+#modelS main > article:nth-child(3) > section:first-of-type {
+	background-image: url(../images/model-s-performance-mobile.jpeg);
+	background-size: 120%;
+	background-position: 50% 40%;
+}
+
+#modelS main > article > section:first-of-type > ul {
+	display: flex;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#modelS main > article > section:first-of-type > ul > li {
+	display: flex;
+	flex-direction: column;
+	padding: 0 .625em;
+	align-items: center;
+	width: 33%;
+	border-left: 1px solid #fff;
+}
+
+#modelS main > article > section:first-of-type > ul > li:first-of-type {
+	border-left: none;
+}
+
+#modelS main > article > section:first-of-type li > section {
+	display: flex;
+	margin: .5em 0;
+	align-items: center;
+}
+
+#modelS main > article > section:first-of-type li > section h5 {
+	margin-left: .3em;
+	color: #fff;
+}
+
+#modelS main > article > section:first-of-type li > section h4 {
+	color: #fff;
+}
+
+#modelS main > article > section:first-of-type p {
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #fff;
+	text-align: center;
+	padding: .4em 0 0 0;
+}
+
+
+/*  SECTION 4 */
+
+#modelS main > article:nth-child(4) > section:first-of-type {
+	max-height: 425px;
+	overflow: hidden;
+	padding-bottom: 0;
+}
+
+#modelS main > article > section:first-of-type video {
+	object-fit: cover;
+	object-position: 50% 50%;
+	height: 100%;
+	width: 100%;
+}
+
+#modelS main > article:nth-child(4) > section:first-of-type > ul {
+	position: absolute;
+	margin-bottom: 5vh;
+}
+
+
+/*  SECTION 5 */
+
+#modelS main > article:nth-child(5) > section:first-of-type {
+	max-height: 425px;
+	overflow: hidden;
+	padding-bottom: 0;
+}
+
+#modelS main > article:nth-child(5) > section:first-of-type > ul {
+	position: absolute;
+	margin-bottom: 5vh;
+	filter: invert(1);
+}
+
+#modelS main > article:nth-child(5) > section:first-of-type > ul > li:last-of-type h4 {
+	border: 2px solid #fff;
+	padding: 5px 6.5px;
+	border-radius: 50%;
+}
+
+
+/*  SECTION 6 */
+
+#modelS main > article:nth-child(6) > section:first-of-type {
+	background-image: url(../images/interieur_mobile.jpeg);
+	background-size: 120%;
+	background-position: 50% 40%;
+}
+
+#modelS main > article > section:first-of-type > ul > li img {
+	height: 33px;
+	margin: 0;
+}
+
+#modelS main > article:nth-child(6) > section:first-of-type > ul > li:nth-child(2) section {
+	margin-bottom: 0;
+}
+
+
+/*  SECTION 7 */
+
+#modelS main > article:nth-child(7) > section:first-of-type {
+	background-image: url(../images/exterieur_mobile.jpeg);
+	background-size: 120%;
+	background-position: 50% 38%;
+}
+
+#modelS main > article:nth-child(7) > section:first-of-type > ul {
+	position: absolute;
+	top: 0;
+	bottom: inherit;
+	margin-top: 5vh;
+	filter: invert(1);
+}
+
+#modelS main > article:nth-child(7) > section:first-of-type > ul > li:nth-child(2) section {
+	margin-bottom: 0;
+}
+
+#modelS main > article:nth-child(7) > section:first-of-type > ul > li:nth-child(3) section {
+	margin-bottom: 0;
+}
+
+#modelS main > article:nth-child(7) > section:first-of-type > ul > li img {
+	height: 33px;
+	filter: invert(1);
+}
+
+#modelS main > article:nth-child(7) > section:first-of-type > ul > li:first-of-type h4 {
+	border: 2px solid #fff;
+	padding: 5px 10.5px;
+	border-radius: 50%;
+}
+
+
+/*  ARTICLE 8 */
+
+#modelS main > article:nth-child(8) {
+	background: #000;
+	padding: 3em 1.5em;
+}
+
+#modelS main > article:nth-child(8) > section:first-of-type {
+	height: auto;
+	display: inherit;
+	align-items: inherit;
+	padding-bottom: inherit;
+	padding: 0;
+}
+
+#modelS main > article:nth-child(8) > section:first-of-type > img {
+	height: auto;
+	width: 100%;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type {
+	padding: 0;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > h4 {
+	color: #fff;
+	font-family: Gotham Thin;
+	font-size: 24px;
+	letter-spacing: .7px;
+	margin-bottom: 1.4em;
+}
+
+#modelS h4 strong {
+	font-family: Gotham Book;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > button {
+	width: 100%;
+	padding: .8em;
+	margin: 0;
+	color: #fff;
+	font-size: .8em;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background-color: transparent;
+	border: 3px solid #fff;
+	border-radius: 3em;
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: none;
+	margin: .3em 0;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > button:last-of-type {
+	border-color: #393c41;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > section {
+	margin-top: 1.5em;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: flex-start;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > section > ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > section > ul > li {
+	display: inherit;
+	position: relative;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > section > ul > li::before {
+	content:"";
+	background: hsla(0, 0%, 100%, .5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 1px;
+	width: 30px;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > section > ul > li > h5 {
+	padding-top: .8em;
+	color: #fff;
+	font-family: Gotham Medium;
+	letter-spacing: .5px;
+}
+
+#modelS main > article:nth-child(8) > section:last-of-type > section > ul > li > p {
+	color: #fff;
+	margin-top: .3em;
+	padding: 0 0 2.4em 0;
+}
+
+
+/*  ARTICLE 9 */
+
+#modelS main > article:nth-child(9) {
+	margin-top: 5%;
+	padding: 2em 1.5em 0;
+	padding-bottom: 2vh;
+	width: 100%;
+}
+
+#modelS main > article:nth-child(9) h3 {
+	margin-bottom: 2em;
+}
+
+#modelS main > article:nth-child(9) > a {
+	width: 100%;
+	padding: .8em;
+	margin: 0;
+	color: #000;
+	font-size: .8em;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background-color: transparent;
+	border: 3px solid #171a20;
+	border-radius: 3em;
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: none;
+	display: block;
+	transition: .5s;
+	margin-bottom: 2em;
+}
+
+#modelS main > article:nth-child(9) > a:hover {
+	background: #171a20;
+	color: #fff;
+	transition: .5s;
+}
+
+
+/*  SCROLL UP ASIDE */
+
+#modelS main > aside {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	z-index: 50;
+	padding: 1em 1em 0 1em;
+}
+
+.showAside {
+	transform: translateZ(0);
+	transition: .2s;
+}
+
+.hideAside {
+	transform: translate3d(0,-100%,0);
+	transition: .2s;
+}
+
+#modelS main > aside > section > a > img {
+	width: 100px;
+	height: auto;
+	margin: 0;
+}
+
+#modelS main > aside > section > a:last-of-type img {
+	height: 1.25em;
+	width: auto;
+	margin: 0;
+}
+
+#modelS main > aside > section:first-of-type {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+#modelS main > aside > section:last-of-type {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: .8125em;
+}
+
+#modelS main > aside > section:last-of-type a {
+	width: auto;
+	padding: .4em 2.2em;
+	margin: 4px;
+	color: #000;
+	font-size: .66em;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background-color: transparent;
+	border: 3px solid #171a20;
+	border-radius: 3em;
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: none;
+	display: block;
+	transition: .5s;
+}
+
+#modelS main > aside > section:last-of-type a:last-of-type {
+	background: #171a20;
+	color: #fff;
+	transition: .5s;
+}
+
+#modelS main > aside > section:last-of-type a:hover {
+	background: #171a20;
+	color: #fff;
+	transition: .5s;
+}
+
+
+/*  FOOTER */
+
+#modelS footer {
+	display: block;
+	position: relative;
+	background-color: #fff;
+	padding-bottom: .7em;
+	bottom: 0;
+}
+
+#modelS footer li a {
+	color: #000;
+}
+
+
+
