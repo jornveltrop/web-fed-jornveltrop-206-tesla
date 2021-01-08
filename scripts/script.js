@@ -36,17 +36,7 @@ function open() {
 };
 
 
-// 1.3 ESC CLOSE
-
-document.onkeydown = function(evt) {
-  evt = evt || window.event;
-  if (evt.keyCode == 27) {
-    close();
-  }
-};
-
-
-// 1.4 CLICK MENU CLOSE
+// 1.3 CLICK MENU CLOSE
 
 main.addEventListener("click", close);
 
@@ -57,11 +47,21 @@ function close() {
   main.classList.toggle("overflow", false);
   main.classList.toggle("navOverlay", false);
 
-  // 1.4.1 RESET TABINDEX
+  // 1.3.1 RESET TABINDEX
   for (i = 0; i < menuItems.length; i++) {
     menuItems[i].setAttribute("tabindex", "-1");
   }
 }
+
+
+// 1.4 ESC CLOSE
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  if (evt.keyCode == 27) {
+    close();
+  }
+};
 
 
 // 2. SPEEDOMETER ANIMATIE
